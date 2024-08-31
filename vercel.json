@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/work", "destination": "/" },
+    { "source": "/services", "destination": "/" }
+  ]
+}

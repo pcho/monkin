@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "settings": {
+    "tailwindcss": {
+      "callees": [
+        "clsx",
+        "cva",
+        "cx",
+        "cn"
+      ]
+    }
+  },
+  "root": true
+}
