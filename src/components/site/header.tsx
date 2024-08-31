@@ -67,7 +67,7 @@ const Header = () => {
           </TooltipTrigger>
           <TooltipContent>
             <Link
-              href="https://github.com/pcho/monkinco"
+              href="https://github.com/pcho/monkin"
               className="inline-flex items-center rounded-md text-sm font-medium ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2 dark:ring-offset-neutral-950 dark:focus-visible:ring-white"
             >
               <IconBrandGithub size={18} />
