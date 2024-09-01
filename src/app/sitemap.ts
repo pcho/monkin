@@ -14,11 +14,22 @@ async function getAppRoutes(): Promise<string[]> {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = await getAppRoutes();
   const baseUrl = "https://monkin.co";
+  const currentDate = new Date().toISOString();
 
-  return routes.map((route) => ({
-    url: `${baseUrl}/${route}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: "weekly",
-    priority: 1,
-  }));
+  const sitemapEntries: MetadataRoute.Sitemap = [
+    ...routes.map((route) => ({
+      url: `${baseUrl}/${route}`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 1,
+    })),
+    {
+      url: baseUrl,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 1,
+    },
+  ];
+
+  return sitemapEntries;
 }
