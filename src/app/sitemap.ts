@@ -6,7 +6,9 @@ async function getAppRoutes(): Promise<string[]> {
   const appDir = path.join(process.cwd(), "src/app");
   const files = await fs.readdir(appDir, { withFileTypes: true });
 
-  return files.filter((file) => file.isDirectory()).map((file) => file.name);
+  return files
+    .filter((file) => file.isDirectory() && file.name !== "api")
+    .map((file) => file.name);
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
