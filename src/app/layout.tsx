@@ -25,7 +25,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: "https://monkin.co/static/og.jpg",
+    images: "https://monkin.co/static/og.png",
     creator: "@pc__ho",
   },
 };
