@@ -4,17 +4,26 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { globalDescription } from "@/data/metadata";
 import { Toaster } from "@/ui/toaster";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import type { Viewport } from "next";
 
 import Footer from "@/site/footer";
 import Header from "@/site/header";
 
 import "@/styles/globals.css";
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
+};
+
 export const metadata = {
   title: {
     default: "Monkin - Przemysław Chojecki",
     template: "%s | Monkin - Przemysław Chojecki",
   },
+  manifest: "https://monkin.co/manifest.json",
   ...globalDescription,
   openGraph: {
     type: "website",
@@ -27,6 +36,19 @@ export const metadata = {
     card: "summary_large_image",
     images: "https://monkin.co/static/og.png",
     creator: "@pc__ho",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 

@@ -1,6 +1,14 @@
 {
   "redirects": [
     { "source": "/work", "destination": "/" },
-    { "source": "/services", "destination": "/" }
+    { "source": "/services", "destination": "/" },
+    { "source": "/awaymo", "destination": "/" },
+    { "source": "/piwik", "destination": "/" },
+    { "source": "/kanary_nest", "destination": "/" },
+    { "source": "/blink_shel", "destination": "/" },
+    { "source": "/smt", "destination": "/" },
+    { "source": "/stealmobi", "destination": "/" },
+    { "source": "/other", "destination": "/" },
+    { "source": "/adviserbrief", "destination": "/" }
   ]
 }
