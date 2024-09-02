@@ -45,21 +45,31 @@ export default function ContactForm() {
         body: JSON.stringify(values),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
         toast({
           title: "Message sent",
           description: "Thank you for your message. I'll get back to you soon.",
         });
         form.reset();
+      } else if (response.status === 429) {
+        toast({
+          title: "Rate limit exceeded",
+          description: `Please try again in ${Math.ceil((data.rateLimit.reset - Date.now()) / 1000)} seconds.`,
+          variant: "destructive",
+        });
       } else {
-        throw new Error("Failed to send message");
+        throw new Error(data.error || "Failed to send message");
       }
     } catch (error) {
       console.error("Error sending email:", error);
       toast({
         title: "Error",
         description:
-          "There was a problem sending your message. Please try again.",
+          error instanceof Error
+            ? error.message
+            : "There was a problem sending your message. Please try again.",
         variant: "destructive",
       });
     } finally {
