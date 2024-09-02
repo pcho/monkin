@@ -1,7 +1,7 @@
 {
   "redirects": [
     { "source": "/work", "destination": "/" },
-    { "source": "/services", "destination": "/" },
+    { "source": "/services", "destination": "/about" },
     { "source": "/awaymo", "destination": "/" },
     { "source": "/piwik", "destination": "/" },
     { "source": "/kanary_nest", "destination": "/" },
