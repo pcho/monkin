@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { globalDescription } from "@/data/metadata";
 import { Toaster } from "@/ui/toaster";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import type { Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 
 import Footer from "@/site/footer";
 import Header from "@/site/header";
@@ -18,7 +18,7 @@ export const viewport: Viewport = {
   ],
 };
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: "Monkin - Przemysław Chojecki",
     template: "%s | Monkin - Przemysław Chojecki",

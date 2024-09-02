@@ -10,8 +10,9 @@ import { about, clients, faq } from "@/data/content";
 import Contact from "@/site/contact";
 import { Container } from "@/ui/container";
 import { Typography } from "@/ui/typography";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "About Me",
 };
 
