@@ -54,16 +54,18 @@ export default function ContactForm() {
         });
         form.reset();
       } else if (response.status === 429) {
+        const resetTime = data.rateLimit?.reset
+          ? Math.ceil((data.rateLimit.reset - Date.now()) / 1000)
+          : "some time";
         toast({
           title: "Rate limit exceeded",
-          description: `Please try again in ${Math.ceil((data.rateLimit.reset - Date.now()) / 1000)} seconds.`,
+          description: `Please try again in ${resetTime} seconds.`,
           variant: "destructive",
         });
       } else {
         throw new Error(data.error || "Failed to send message");
       }
     } catch (error) {
-      console.error("Error sending email:", error);
       toast({
         title: "Error",
         description:

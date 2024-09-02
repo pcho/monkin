@@ -13,11 +13,10 @@ export async function POST(request: Request) {
       namespace: "contact_form",
       identifier: ip,
       limit: 5,
-      duration: 3600000,
+      duration: 3600000, // 1 hour in milliseconds
     });
 
     if (error) {
-      console.error("Unkey error:", error);
       return NextResponse.json(
         { error: "Rate limit check failed" },
         { status: 500 },
@@ -26,7 +25,14 @@ export async function POST(request: Request) {
 
     if (!result.success) {
       return NextResponse.json(
-        { error: "Rate limit exceeded. Please try again later." },
+        {
+          error: "Rate limit exceeded. Please try again later.",
+          rateLimit: {
+            limit: result.limit,
+            remaining: result.remaining,
+            reset: result.reset,
+          },
+        },
         { status: 429 },
       );
     }
@@ -39,9 +45,7 @@ export async function POST(request: Request) {
       to: [RECIPIENT_EMAIL],
       subject: "MONKIN: New Submission",
       text: message,
-      html: `
-        <p>${message.replace(/\n/g, "<br>")}</p>
-      `,
+      html: `<p>${message.replace(/\n/g, "<br>")}</p>`,
     });
 
     if (resendError) {
