@@ -50,6 +50,55 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: [
+      { url: "/icon?id=favicon-16x16", sizes: "16x16", type: "image/png" },
+      { url: "/icon?id=favicon-32x32", sizes: "32x32", type: "image/png" },
+      { url: "/icon?id=icon-192x192", sizes: "192x192", type: "image/png" },
+      { url: "/icon?id=icon-512x512", sizes: "512x512", type: "image/png" },
+      {
+        url: "/icon?id=favicon-16x16&mode=dark",
+        sizes: "16x16",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/icon?id=favicon-32x32&mode=dark",
+        sizes: "32x32",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/icon?id=icon-192x192&mode=dark",
+        sizes: "192x192",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/icon?id=icon-512x512&mode=dark",
+        sizes: "512x512",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+    shortcut: ["/favicon.ico"],
+    apple: [
+      { url: "/icon?id=icon-192x192", sizes: "192x192", type: "image/png" },
+      {
+        url: "/icon?id=icon-192x192&mode=dark",
+        sizes: "192x192",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+        color: "#0a0a0a",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
