@@ -13,7 +13,7 @@ export async function POST(request: Request) {
       namespace: "contact_form",
       identifier: ip,
       limit: 5,
-      duration: 3600000, // 1 hour in milliseconds
+      duration: 3600000,
     });
 
     if (error) {

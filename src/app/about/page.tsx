@@ -11,6 +11,10 @@ import Contact from "@/site/contact";
 import { Container } from "@/ui/container";
 import { Typography } from "@/ui/typography";
 
+export const metadata = {
+  title: "About Me",
+};
+
 const About = () => {
   return (
     <Container>
