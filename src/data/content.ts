@@ -7,9 +7,9 @@ export const info = {
 
 export const about = {
   intro:
-    "I am a product designer devoted to creating intuitive and visually appealing user experiences. With a strong focus on data-driven designs, I oversee projects from initial brainstorming to final deployment, whether they are simple apps or complex business solutions.",
+    "I'm a product designer with a passion for crafting user experiences that are not just visually appealing but also intuitive and enjoyable to use. Whether it's a simple app or a complex business solution, I specialize in designing data-heavy interfaces that turn intricate information into clean, user-friendly designs.",
   approach:
-    "I have a knack for turning complex problems into streamlined designs, ensuring that each product is both functional and a joy to use. My process is hands-on, involving thorough planning, detailed prototyping, and a commitment to pixel-perfect execution.",
+    "I'm dedicated to seeing projects through from the first brainstorming session to the final launch. I love taking on complex challenges and transforming them into elegant, easy-to-use solutions. My approach is hands-on and detail-oriented: I dive deep into planning, create detailed prototypes, and ensure every pixel is in the right place before a product goes out the door. I believe in the power of data-driven design, but I also never forget the importance of making products that users will love.",
 };
 
 export const clients = [
