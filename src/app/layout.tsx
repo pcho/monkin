@@ -52,52 +52,54 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/icon?id=favicon-16x16", sizes: "16x16", type: "image/png" },
-      { url: "/icon?id=favicon-32x32", sizes: "32x32", type: "image/png" },
+      { url: "/icon?id=icon-16x16", sizes: "16x16", type: "image/png" },
+      { url: "/icon?id=icon-32x32", sizes: "32x32", type: "image/png" },
+      { url: "/icon?id=icon-96x96", sizes: "96x96", type: "image/png" },
       { url: "/icon?id=icon-192x192", sizes: "192x192", type: "image/png" },
       { url: "/icon?id=icon-512x512", sizes: "512x512", type: "image/png" },
       {
-        url: "/icon?id=favicon-16x16&mode=dark",
+        url: "/icon?id=icon-16x16-dark",
         sizes: "16x16",
         type: "image/png",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/icon?id=favicon-32x32&mode=dark",
+        url: "/icon?id=icon-32x32-dark",
         sizes: "32x32",
         type: "image/png",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/icon?id=icon-192x192&mode=dark",
+        url: "/icon?id=icon-96x96-dark",
+        sizes: "96x96",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/icon?id=icon-192x192-dark",
         sizes: "192x192",
         type: "image/png",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/icon?id=icon-512x512&mode=dark",
+        url: "/icon?id=icon-512x512-dark",
         sizes: "512x512",
         type: "image/png",
         media: "(prefers-color-scheme: dark)",
       },
     ],
-    shortcut: ["/favicon.ico"],
     apple: [
-      { url: "/icon?id=icon-192x192", sizes: "192x192", type: "image/png" },
-      {
-        url: "/icon?id=icon-192x192&mode=dark",
-        sizes: "192x192",
-        type: "image/png",
-        media: "(prefers-color-scheme: dark)",
-      },
+      { url: "/icon?id=icon-57x57", sizes: "57x57", type: "image/png" },
+      { url: "/icon?id=icon-60x60", sizes: "60x60", type: "image/png" },
+      { url: "/icon?id=icon-72x72", sizes: "72x72", type: "image/png" },
+      { url: "/icon?id=icon-76x76", sizes: "76x76", type: "image/png" },
+      { url: "/icon?id=icon-114x114", sizes: "114x114", type: "image/png" },
+      { url: "/icon?id=icon-120x120", sizes: "120x120", type: "image/png" },
+      { url: "/icon?id=icon-144x144", sizes: "144x144", type: "image/png" },
+      { url: "/icon?id=icon-152x152", sizes: "152x152", type: "image/png" },
+      { url: "/icon?id=icon-180x180", sizes: "180x180", type: "image/png" },
     ],
-    other: [
-      {
-        rel: "mask-icon",
-        url: "/safari-pinned-tab.svg",
-        color: "#0a0a0a",
-      },
-    ],
+    shortcut: ["/favicon.ico"],
   },
 };
 
@@ -108,6 +110,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-US" className={`${inter.variable} scroll-smooth font-sans`}>
+      <head>
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0a0a0a" />
+      </head>
       <body className="mx-auto bg-white selection:bg-primary selection:text-white dark:bg-neutral-950 dark:selection:bg-white dark:selection:text-neutral-950">
         <ThemeProvider
           attribute="class"
