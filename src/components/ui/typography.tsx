@@ -5,7 +5,7 @@ import { PropsWithChildren } from "react";
 const typographyStyles = cva("leading-snug [text-wrap:balance]", {
   variants: {
     variant: {
-      p: "pt-12 text-4xl font-medium text-neutral-950 dark:text-white md:pt-20 md:text-6xl",
+      p: "text-4xl font-medium text-neutral-950 dark:text-white md:text-6xl",
       h1: "break-words text-[186px] font-black uppercase leading-none text-neutral-950 dark:text-white",
       h2: "break-words text-6xl font-black uppercase leading-none text-neutral-950 dark:text-white md:text-9xl",
       small:

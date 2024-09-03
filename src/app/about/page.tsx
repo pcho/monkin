@@ -7,6 +7,7 @@ import {
 import { about, clients, faq } from "@/data/content";
 import Contact from "@/site/contact";
 import { Container } from "@/ui/container";
+import { Separator } from "@/ui/separator";
 import { Typography } from "@/ui/typography";
 import type { Metadata } from "next";
 
@@ -18,13 +19,11 @@ const About = () => {
   return (
     <Container>
       <Typography variant="h1">About me</Typography>
+      <Separator />
       <Typography variant="p">{about.intro}</Typography>
-      <Typography variant="p" className="pt-10">
-        {about.approach}
-      </Typography>
-      <Typography variant="h2" className="pt-12 md:pt-24">
-        FAQ
-      </Typography>
+      <Typography variant="p">{about.approach}</Typography>
+      <Separator />
+      <Typography variant="h2">FAQ</Typography>
       <Accordion type="single" collapsible className="w-full">
         {faq.map((item, index) => (
           <AccordionItem key={`faq-${index}`} value={`item-${index + 1}`}>
@@ -33,9 +32,7 @@ const About = () => {
           </AccordionItem>
         ))}
       </Accordion>
-      <Typography variant="h2" className="pt-12 md:pt-24">
-        Selected Clients
-      </Typography>
+      <Typography variant="h2">Selected Clients</Typography>
       <div className="mt-6 grid grid-cols-2 gap-4 md:gap-12">
         {clients.map((client, index) => (
           <Typography
