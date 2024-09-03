@@ -17,15 +17,19 @@ function ContactInfo({
   href,
   icon: Icon,
   text,
+  title,
 }: {
   href: string;
   icon: typeof IconMail | typeof IconBrandWhatsapp | typeof IconBrandTelegram;
   text: string;
+  title: string;
 }) {
   return (
     <a
       href={href}
       className="flex items-center gap-4 text-2xl font-medium text-neutral-950 hover:underline dark:text-white md:text-4xl"
+      target="_blank"
+      title={title}
     >
       <Icon size={48} />
       {text}
@@ -43,16 +47,19 @@ export default function ContactPage() {
           href="mailto:p@monkin.co"
           icon={IconMail}
           text="p@monkin.co"
+          title="Email"
         />
         <ContactInfo
           href="https://wa.me/48537538521"
           icon={IconBrandWhatsapp}
           text="+48 537 538 521"
+          title="WhatsApp"
         />
         <ContactInfo
           href="https://telegram.me/pcho0"
           icon={IconBrandTelegram}
           text="@pcho0"
+          title="Telegram"
         />
       </div>
       <Separator />

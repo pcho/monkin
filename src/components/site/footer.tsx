@@ -12,11 +12,12 @@ interface SocialLinkProps {
   href: string;
   icon: React.ReactNode;
   label: string;
+  title: string;
 }
 
-const SocialLink = ({ href, icon, label }: SocialLinkProps) => (
+const SocialLink = ({ href, icon, label, title }: SocialLinkProps) => (
   <Button variant="footer" size="footer" asChild>
-    <Link href={href}>
+    <Link href={href} target="_blank" title={title}>
       {icon}
       <span className="hidden sm:inline">{label}</span>
     </Link>
@@ -39,21 +40,25 @@ const Footer = () => {
           href="https://github.com/pcho"
           icon={<IconBrandGithub size={18} />}
           label="@pcho"
+          title="GitHub"
         />
         <SocialLink
           href="https://www.linkedin.com/in/pchojecki/"
           icon={<IconBrandLinkedin size={18} />}
           label="pchojecki"
+          title="LinkedIn"
         />
         <SocialLink
           href="https://x.com/pc__ho"
           icon={<IconBrandX size={18} />}
           label="@pc__ho"
+          title="X"
         />
         <SocialLink
           href="static/cv-przemyslaw-chojecki-2024.pdf"
           icon={<IconFileTypePdf size={18} />}
           label="CV"
+          title="CV"
         />
       </div>
     </footer>
