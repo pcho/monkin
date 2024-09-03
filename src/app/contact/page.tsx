@@ -25,7 +25,7 @@ function ContactInfo({
   return (
     <a
       href={href}
-      className="flex items-center gap-4 text-2xl font-medium text-neutral-950 dark:text-white md:text-4xl"
+      className="flex items-center gap-4 text-2xl font-medium text-neutral-950 hover:underline dark:text-white md:text-4xl"
     >
       <Icon size={48} />
       {text}
