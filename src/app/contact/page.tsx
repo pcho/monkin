@@ -16,12 +16,10 @@ export const metadata: Metadata = {
 function ContactInfo({
   href,
   icon: Icon,
-  text,
   title,
 }: {
   href: string;
   icon: typeof IconMail | typeof IconBrandWhatsapp | typeof IconBrandTelegram;
-  text: string;
   title: string;
 }) {
   return (
@@ -32,7 +30,7 @@ function ContactInfo({
       title={title}
     >
       <Icon size={48} />
-      {text}
+      {title}
     </a>
   );
 }
@@ -46,19 +44,16 @@ export default function ContactPage() {
         <ContactInfo
           href="mailto:p@monkin.co"
           icon={IconMail}
-          text="p@monkin.co"
-          title="Email"
+          title="p@monkin.co"
         />
         <ContactInfo
           href="https://wa.me/48537538521"
           icon={IconBrandWhatsapp}
-          text="+48 537 538 521"
           title="WhatsApp"
         />
         <ContactInfo
           href="https://telegram.me/pcho0"
           icon={IconBrandTelegram}
-          text="@pcho0"
           title="Telegram"
         />
       </div>
