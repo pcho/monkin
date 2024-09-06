@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { globalDescription } from "@/data/metadata";
 import { Toaster } from "@/ui/toaster";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 
 import Footer from "@/site/footer";
@@ -125,8 +126,9 @@ export default function RootLayout({
           <Footer />
           <Toaster />
         </ThemeProvider>
+        <SpeedInsights />
+        <AnalyticsWrapper />
       </body>
-      <AnalyticsWrapper />
       <GoogleAnalytics gaId="G-2HFEKKP6LV" />
     </html>
   );
