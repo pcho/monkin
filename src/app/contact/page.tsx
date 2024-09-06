@@ -5,6 +5,7 @@ import { Typography } from "@/ui/typography";
 import {
   IconBrandTelegram,
   IconBrandWhatsapp,
+  IconBrandZoom,
   IconMail,
 } from "@tabler/icons-react";
 import type { Metadata } from "next";
@@ -40,7 +41,7 @@ export default function ContactPage() {
     <Container>
       <Typography variant="h1">Contact Me</Typography>
       <Separator />
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         <ContactInfo
           href="mailto:p@monkin.co"
           icon={IconMail}
@@ -55,6 +56,11 @@ export default function ContactPage() {
           href="https://telegram.me/pcho0"
           icon={IconBrandTelegram}
           title="Telegram"
+        />
+        <ContactInfo
+          href="https://cal.com/monkin"
+          icon={IconBrandZoom}
+          title="Book a call"
         />
       </div>
       <Separator />
