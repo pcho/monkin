@@ -5,5 +5,7 @@
 @layer base {
   body {
     font-feature-settings: "zero", "tnum", "cpsp", "ss03";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
 }
